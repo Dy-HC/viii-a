@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/LogoTKJ3.jpg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="google-site-verification" content="WHLWQb7_hoW3fRhZ2XmOLPpfN2EubRtyQmTEq6JmpdA" />
+		<title>VIII A</title>
+
+		<!-- Primary Meta Tags -->
+		<meta name="title" content="VIII A" />
+		<meta
+			name="description"
+			content="Selamat datang di halaman resmi kelas VIII A! Mari mengenal lebih dekat tentang kami, siswa-siswi kelas VIII A, yang KECE-KECE." />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://viii-a.vercel.app/" />
+		<meta property="og:title" content="VIII A" />
+		<meta
+			property="og:description"
+			content="Selamat datang di halaman resmi kelas VIII A! Mari mengenal lebih dekat tentang kami, siswa-siswi kelas VIII A, yang KECE-KECE." />
+		<meta property="og:image" content="https://viii-a.vercel.app/Welcome.png" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://viii-a.vercel.app/" />
+		<meta property="twitter:title" content="VIII A" />
+		<meta
+			property="twitter:description"
+			content="Selamat datang di halaman resmi kelas VIII A! Mari mengenal lebih dekat tentang kami, siswa-siswi kelas VIII A, yang KECE-KECE." />
+		<meta property="twitter:image" content="https://viii-a.vercel.app/Welcome.png" />
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.jsx"></script>
+		<script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-messaging.js"></script>
+		<script>
+			<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(function(OneSignal) {
+    OneSignal.init({
+      appId: "f6af7214-11f7-4a83-b570-718963af8f5a",
+      safari_web_id: "web.onesignal.auto.57017041-c410-4b69-86f6-455278402f0c",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
+		</script>
+		<script>
+			const firebaseConfig = {
+  apiKey: "AIzaSyAPoP7BSUeFFgRi9iywJA77tYiZsbJwR6s",
+  authDomain: "viii-1-7242f.firebaseapp.com",
+  projectId: "viii-1-7242f",
+  storageBucket: "viii-1-7242f.appspot.com",
+  messagingSenderId: "912856372437",
+  appId: "1:912856372437:web:e8df28160e44b1fafabe5c"
+};
+		</script>
+		<script>
+			(async function () {
+      const permission = await Notification.requestPermission();
+      if (permission === "granted") {
+        console.log("Notification permission granted");
+
+        // Inisialisasi Firebase Messaging
+        import { getMessaging, getToken, onMessage } from "firebase/messaging";
+        const messaging = getMessaging(app);
+
+        // Dapatkan token FCM perangkat pengguna
+        const currentToken = await getToken(messaging);
+        console.log("Current token:", currentToken);
+
+        // Menggunakan event listener untuk menangani notifikasi
+        onMessage(messaging, (payload) => {
+          console.log("Notification received:", payload);
+          // Handle notification here
+        });
+      }
+    })();
+		</script>
+		
+	</body>
+</html>
